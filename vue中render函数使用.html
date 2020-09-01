@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <heading>
+          标题
+        </heading>
+      </div>
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.7/vue.common.dev.js"></script>
+    
+      <script>
+        let vm = new Vue({
+          el: '#app',
+          data () {
+            return {
+              msg: 'hello world'
+            }
+          },
+          components: {
+            'Heading': {
+              render(createElement) {
+                return createElement(
+                  'h' + this.level,   // 标签名称
+                  this.$slots.default // 子元素数组
+                )
+              },  
+              props: {
+                level: {
+                  type: Number,
+                  default: 1
+                }
+              }
+            }
+          }
+        })
+      </script>
+    
+</body>
+</html>

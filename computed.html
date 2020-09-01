@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        长度：<input v-model="length" type="text" /><br /> 宽度：
+        <input v-model="width" type="text" /><br /> 面积：
+        <input v-model="areas" type="text" />
+    </div>
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/0.10.0/vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                length: '',
+                width: '',
+            },
+            computed: {
+                areas: function() {
+                    console.log('调用computed')
+                    return this.length * this.width
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
