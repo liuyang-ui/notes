@@ -33,3 +33,36 @@ insert()在指定位置插入元素、
 marxes.insert(3,'liu')
 
 del marxes[-1]删除指定位置的元素
+
+
+remove()删除具有指定值的元素
+使用pop()获取并删除指定位置的元素，并将其删除的元素返回
+
+使用Index()查询具有特定值元素位置
+marxes.index()
+
+使用in判断值是否存在
+
+count()记录特定值出现的次数
+
+marxes=['liu','yang']
+print(''.join(marxes))
+
+使用sort()重新排列元素
+使用len()获取长度
+
+
+字典
+使用[key]添加或修改元素
+使用del删除具有指定键的元素
+使用clear()删除所有元素
+
+使用in判断值是否存在(判断键是否存在)
+
+使用Keys()获取所有的键
+使用values()获取所有值
+
+使用items()获取所有的键值对
+
+
+
